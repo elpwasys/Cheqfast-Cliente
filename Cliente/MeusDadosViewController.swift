@@ -31,9 +31,10 @@ extension MeusDadosViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: TableHeaderView.nibName, bundle: nil), forHeaderFooterViewReuseIdentifier: TableHeaderView.reusableCellIdentifier)
+        tableView.register(UINib(nibName: TextFieldTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: TextFieldTableViewCell.reusableCellIdentifier)
     }
     
     fileprivate func popular(_ model: ProcessoModel) {
@@ -58,6 +59,10 @@ extension MeusDadosViewController: UITableViewDelegate {
         return TableHeaderView.height
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return TextFieldTableViewCell.height
+    }
+    
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let header = view as? TableHeaderView {
             header.contentView.backgroundColor = UIColor.white
@@ -77,7 +82,8 @@ extension MeusDadosViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReadonlyTableViewCell", for: indexPath) as! ReadonlyTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.reusableCellIdentifier, for: indexPath) as! TextFieldTableViewCell
+        cell.isEnabled = false
         let campo = grupos[indexPath.section].campos![indexPath.row]
         cell.prepare(campo)
         return cell
