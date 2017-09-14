@@ -1,0 +1,107 @@
+/* 
+  Localizable.strings
+
+  Created by Everton Luiz Pascke on 09/11/16.
+  Copyright © 2016 Everton Luiz Pascke. All rights reserved.
+*/
+
+
+/* Processo Status */
+"Processo.Status.rascunho" = "Rascunho";
+"Processo.Status.emAnalise" = "Em análise";
+"Processo.Status.pendente" = "Pendente";
+"Processo.Status.concluido" = "Concluído";
+"Processo.Status.cancelado" = "Cancelado";
+"Processo.Status.aguardandoAprovacao" = "Aguardando aprovação";
+"Processo.Status.aguardandoDocumentos" = "Aguardando documentos";
+"Processo.Status.emLiberacao" = "Em liberação";
+"Processo.Status.rejeitado" = "Rejeitado";
+
+/* Processo Coleta */
+"Processo.Coleta.aguardandoColeta" = "Aguardando coleta";
+"Processo.Coleta.coletado" = "Coletado";
+"Processo.Coleta.armazenado" = "Armazenado";
+
+/* Documento Status */
+"Documento.Status.incluido" = "Incluído";
+"Documento.Status.pendente" = "Pendente";
+"Documento.Status.aprovado" = "Aprovado";
+"Documento.Status.processando" = "Processando";
+"Documento.Status.rejeitado" = "Rejeitado";
+"Documento.Status.digitalizado" = "Digitalizado";
+
+/* Digitalizacao Tipo */
+"Digitalizacao.Tipo.documento" = "Documento";
+"Digitalizacao.Tipo.tipificacao" = "Tipificação";
+
+/* Digitalizacao Status */
+"Digitalizacao.Status.erro" = "Erro";
+"Digitalizacao.Status.enviado" = "Enviado";
+"Digitalizacao.Status.enviando" = "Enviando";
+"Digitalizacao.Status.aguardando" = "Aguardando";
+
+/* Menu Processo */
+"Menu.Processo" = "Processo";
+"Menu.Novo" = "Novo";
+"Menu.Pendencia" = "Pendência";
+"Menu.Pesquisa" = "Pesquisa";
+"Menu.Consulta" = "Consulta";
+"Menu.Simulador" = "Simulador";
+"Menu.MeusDados" = "Meus dados";
+
+/* Menu Aplicativo */
+"Menu.Aplicativo" = "Aplicativo";
+"Menu.Sobre" = "Sobre";
+"Menu.TermoUso" = "Termo de uso";
+"Menu.Sair" = "Sair";
+
+/* Label */
+"Label.Ok" = "Ok";
+"Label.Sair" = "Sair";
+"Label.Sim" = "Sim";
+"Label.Nao" = "Não";
+"Label.Abrir" = "Abrir";
+"Label.Login" = "Login";
+"Label.Senha" = "Senha";
+"Label.Selecione" = "-- Selecione --";
+"Label.Opcionais" = "Opcionais";
+"Label.Obrigatorios" = "Obrigatórios";
+"Label.CampoObrigatorio" = "é obrigatório";
+"Label.Editar" = "Editar";
+"Label.Enviar" = "Enviar";
+"Label.Reenviar" = "Reenviar";
+"Label.Salvar" = "Salvar";
+"Label.Justificativa" = "Justificativa";
+"Label.Excluir" = "Excluir";
+"Label.CPF" = "CPF";
+"Label.CNPJ" = "CNPJ";
+"Label.Capturar" = "Capturar";
+"Label.Finalizar" = "Finalizar";
+"Label.Cheques" = "Cheques";
+"Label.Documentos" = "Documentos";
+"Label.Justificar" = "Justificar";
+"Label.Substituir" = "Substituir";
+"Label.Cancelar" = "Cancelar";
+
+/* Message */
+"Message.CampoInvalidoMinLength" = "o tamanho mínimo é";
+"Message.CampoInvalidoMaxLength" = "o tamanho máximo é";
+"Message.ServidorIndisponivel" = "Não foi possível conectar ao servidor.";
+"Message.InternetIndisponivel" = "Não há conexão com a internet";
+"Message.EmailInvalido" = "Email inválido!";
+"Message.SairAplicativo" = "Deseja sair do aplicativo?";
+"Message.SemRegistrosExibir" = "Sem registros para exibir";
+"Message.FormularioInvalido" = "Verifique os campos inválidos ou obrigatórios!";
+"Message.EnviarProcesso" = "Deseja enviar este processo?";
+"Message.ReenviarProcesso" = "Deseja reenviar este processo?";
+"Message.ProcessoSalvoSucesso" = "Processo salvo com sucesso";
+"Message.ProcessoEnviadoSucesso" = "Processo enviado com sucesso";
+"Message.ProcessoReenviadoSucesso" = "Processo reenviado com sucesso";
+"Message.ProcessoPendente" = "Existe uma pendência para este processo";
+"Message.SemInfoDigitalizacao" = "Não há informações de digitalização";
+"Message.ErroDigitalizacao" = "Erro na digitalização";
+"Message.JustificativaSucesso" = "Justificativa enviada com sucesso";
+"Message.ErroFinalizarCaptura" = "Capture pelo menos 1 cheque";
+"Message.SubstituirCheque" = "Deseja substituir essa cheque?";
+"Message.DocumentoEnviadoSucesso" = "Documento enviado com sucesso";
+"Message.ProcessoCancelar" = "Deseja cancelar o valor para este lote?";

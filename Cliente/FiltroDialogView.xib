@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FiltroDialogView" customModule="Cliente" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="387"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7U-qP-uwT" customClass="MDCTextField">
+                    <rect key="frame" x="16" y="94" width="343" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="qWy-rK-aFe"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lke-V3-8Q7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvn-oJ-o8M">
+                            <rect key="frame" x="16" y="16" width="343" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" red="0.94641226530075073" green="0.42345219850540161" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <size key="shadowOffset" width="1" height="1"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.59876984359999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="aGM-JG-Ucq"/>
+                        <constraint firstItem="mvn-oJ-o8M" firstAttribute="leading" secondItem="lke-V3-8Q7" secondAttribute="leading" constant="16" id="fN2-dF-iYI"/>
+                        <constraint firstAttribute="trailing" secondItem="mvn-oJ-o8M" secondAttribute="trailing" constant="16" id="gCl-UJ-Kml"/>
+                        <constraint firstAttribute="bottom" secondItem="mvn-oJ-o8M" secondAttribute="bottom" constant="16" id="l7r-VY-0BJ"/>
+                        <constraint firstItem="mvn-oJ-o8M" firstAttribute="top" secondItem="lke-V3-8Q7" secondAttribute="top" constant="16" id="oiO-sp-6Vm"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uE-k6-ZGo">
+                    <rect key="frame" x="16" y="342" width="155.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Limpar">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onLimparTapped" destination="iN0-l3-epB" eventType="touchUpInside" id="lkS-yF-rTC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-2c-vHv">
+                    <rect key="frame" x="203.5" y="342" width="155.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Filtrar">
+                        <color key="titleColor" red="1" green="0.59876984359999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onFiltrarTapped" destination="iN0-l3-epB" eventType="touchUpInside" id="KqN-4y-pjF"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mwn-hN-rdH">
+                    <rect key="frame" x="16" y="156" width="343" height="30"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Período de" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPs-UY-7lW" customClass="DateField" customModule="Cliente" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Período até" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i8S-Mq-elE" customClass="DateField" customModule="Cliente" customModuleProvider="target">
+                            <rect key="frame" x="179.5" y="0.0" width="163.5" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MUz-SI-iNb"/>
+                    </constraints>
+                </stackView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Status do processo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xet-KB-q6x" customClass="PickerField" customModule="Cliente" customModuleProvider="target">
+                    <rect key="frame" x="16" y="218" width="343" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="DdG-Gi-4S7"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Status da coleta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prb-2j-aMq" customClass="PickerField" customModule="Cliente" customModuleProvider="target">
+                    <rect key="frame" x="16" y="280" width="343" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="a5b-V0-v4J"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1uE-k6-ZGo" firstAttribute="width" secondItem="asZ-2c-vHv" secondAttribute="width" id="04G-4a-S9r"/>
+                <constraint firstItem="asZ-2c-vHv" firstAttribute="leading" secondItem="1uE-k6-ZGo" secondAttribute="trailing" constant="32" id="5Ok-rS-K3b"/>
+                <constraint firstAttribute="trailing" secondItem="V7U-qP-uwT" secondAttribute="trailing" constant="16" id="5RD-I1-AW3"/>
+                <constraint firstAttribute="trailing" secondItem="asZ-2c-vHv" secondAttribute="trailing" constant="16" id="5XB-A8-hRQ"/>
+                <constraint firstItem="1uE-k6-ZGo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="6Bg-BW-XEc"/>
+                <constraint firstAttribute="trailing" secondItem="Mwn-hN-rdH" secondAttribute="trailing" constant="16" id="7JY-RN-gEs"/>
+                <constraint firstItem="V7U-qP-uwT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="8m1-Xa-GQm"/>
+                <constraint firstAttribute="bottom" secondItem="asZ-2c-vHv" secondAttribute="bottom" constant="16" id="91d-mi-Jnf"/>
+                <constraint firstItem="Mwn-hN-rdH" firstAttribute="top" secondItem="V7U-qP-uwT" secondAttribute="bottom" constant="32" id="CPO-Nt-j0G"/>
+                <constraint firstItem="lke-V3-8Q7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GSl-Xv-Q2T"/>
+                <constraint firstItem="lke-V3-8Q7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I4n-bt-8hd"/>
+                <constraint firstItem="prb-2j-aMq" firstAttribute="top" secondItem="Xet-KB-q6x" secondAttribute="bottom" constant="32" id="IFU-pJ-nDr"/>
+                <constraint firstAttribute="trailing" secondItem="prb-2j-aMq" secondAttribute="trailing" constant="16" id="IK0-ld-fRN"/>
+                <constraint firstAttribute="trailing" secondItem="Xet-KB-q6x" secondAttribute="trailing" constant="16" id="Ljt-jz-LLH"/>
+                <constraint firstItem="Xet-KB-q6x" firstAttribute="top" secondItem="Mwn-hN-rdH" secondAttribute="bottom" constant="32" id="PXq-On-iVG"/>
+                <constraint firstItem="Mwn-hN-rdH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="QXp-Yg-xnF"/>
+                <constraint firstItem="prb-2j-aMq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ffE-0C-twM"/>
+                <constraint firstItem="V7U-qP-uwT" firstAttribute="top" secondItem="lke-V3-8Q7" secondAttribute="bottom" constant="32" id="jqY-Jm-DMv"/>
+                <constraint firstItem="Xet-KB-q6x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="mIm-Ro-Qdy"/>
+                <constraint firstAttribute="bottom" secondItem="1uE-k6-ZGo" secondAttribute="bottom" constant="16" id="nV9-AG-bMZ"/>
+                <constraint firstAttribute="trailing" secondItem="lke-V3-8Q7" secondAttribute="trailing" id="vl9-WP-i2K"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="coletaPickerField" destination="prb-2j-aMq" id="JSY-RN-4ag"/>
+                <outlet property="dataInicioDateField" destination="EPs-UY-7lW" id="Ntw-Lz-53U"/>
+                <outlet property="dataTerminoDateField" destination="i8S-Mq-elE" id="LAk-JP-OWf"/>
+                <outlet property="numeroTextField" destination="V7U-qP-uwT" id="1ho-g2-meQ"/>
+                <outlet property="statusPickerField" destination="Xet-KB-q6x" id="J34-TC-dAu"/>
+                <outlet property="topView" destination="lke-V3-8Q7" id="oSm-Xc-cyU"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="-83"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>App</key>
+	<string>Cliente</string>
+	<key>Protocol</key>
+	<string>http</string>
+	<key>Host</key>
+	<string>wasys-ocr2.wasys.com.br</string>
+	<key>Port</key>
+	<string>84</string>
+	<key>ContextApp</key>
+	<string>cheqfast</string>
+	<key>ContextFile</key>
+	<string>file</string>
+	<key>ContextRest</key>
+	<string>rest</string>
+</dict>
+</plist>
