@@ -85,7 +85,7 @@ class TextFieldTableViewCell: CampoTableViewCell {
 extension TextFieldTableViewCell {
     
     static var height: CGFloat {
-        return 84
+        return 87
     }
     
     static var nibName: String {

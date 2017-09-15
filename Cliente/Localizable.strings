@@ -82,6 +82,9 @@
 "Label.Justificar" = "Justificar";
 "Label.Substituir" = "Substituir";
 "Label.Cancelar" = "Cancelar";
+"Label.Aprovar" = "Aprovar";
+"Label.TrocarCPF" = "Trocar para CPF";
+"Label.TrocarCNPJ" = "Trocar para CNPJ";
 
 /* Message */
 "Message.CampoInvalidoMinLength" = "o tamanho mínimo é";
@@ -105,3 +108,6 @@
 "Message.SubstituirCheque" = "Deseja substituir essa cheque?";
 "Message.DocumentoEnviadoSucesso" = "Documento enviado com sucesso";
 "Message.ProcessoCancelar" = "Deseja cancelar o valor para este lote?";
+"Message.CustoTransferencia" = "Custo de R$ %@ por transferência.";
+"Message.TransferenciaInvalida" = "Transferência inválida";
+"Message.AprovarProcesso" = "Deseja aprovar o valor para este lote?";

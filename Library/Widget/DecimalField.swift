@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialTextFields
 
-class DecimalField: UITextField, UITextFieldDelegate {
+class DecimalField: MDCTextField, UITextFieldDelegate {
 
     var current = ""
     

@@ -110,7 +110,8 @@ extension ProcessoDetalheViewController {
             }
             tableView.reloadData()
             // FLOAT BUTTONS
-            hideMenu()
+            //hideMenu()
+            /*
             if let regra = self.regra {
                 aprovarFloatButton.isHidden = !regra.podeAprovar
                 cancelarFloatButton.isHidden = !regra.podeCancelar
@@ -118,6 +119,7 @@ extension ProcessoDetalheViewController {
                     menuFloatButton.isHidden = false
                 }
             }
+ */
         }
     }
     
@@ -151,7 +153,7 @@ extension ProcessoDetalheViewController {
                 item.titleColor = UIColor.black
                 item.titleShadowColor = UIColor.white.withAlphaComponent(0)
             }
-            hideMenu()
+            //hideMenu()
             self.view.addSubview(menuFloatButton)
         }
     }
@@ -164,7 +166,9 @@ extension ProcessoDetalheViewController {
     }
     
     fileprivate func onAprovarTapped() {
-        
+        let controller = UIStoryboard.viewController("Menu", identifier: "Scene.Transferencia") as! TransferenciaViewController
+        controller.id = id
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     fileprivate func onCancelarTapped() {

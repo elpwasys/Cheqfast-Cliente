@@ -15,7 +15,7 @@ public class NumberUtils {
         formatter.numberStyle = .currency
         formatter.currencyCode = nil
         formatter.currencySymbol = ""
-        formatter.locale = Locale(identifier: "pt_BR")
+        formatter.locale = App.locale
         return formatter
     }
     
@@ -30,16 +30,13 @@ public class NumberUtils {
     }
     
     public static func format(_ value: NSNumber) -> String? {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.locale = App.locale
         return formatter.string(from: value)
     }
     
     static func parse(_ value: String) -> Double? {
         return formatter.number(from: value)?.doubleValue
     }
-    
+        
     static func parse(_ value: String?) -> Int? {
         guard let text = value else {
             return nil

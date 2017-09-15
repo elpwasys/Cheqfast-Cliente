@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		695CF38078D40FDC16DDBEF2 /* Pods_Cliente.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DCF36DDC724F47EF26F814 /* Pods_Cliente.framework */; };
+		EE2DACA51F6B33C1009A4EA9 /* TransferenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DACA41F6B33C1009A4EA9 /* TransferenciaViewController.swift */; };
+		EE2DACA71F6B33EC009A4EA9 /* FavorecidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DACA61F6B33EC009A4EA9 /* FavorecidoViewController.swift */; };
 		EE333BF11F66BF7500591CD4 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE333BF01F66BF7500591CD4 /* ImageService.swift */; };
 		EE333C021F66FA7A00591CD4 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE333C011F66FA7A00591CD4 /* ImageViewer.swift */; };
 		EE333C041F66FD9B00591CD4 /* ProcessoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE333C031F66FD9B00591CD4 /* ProcessoService.swift */; };
@@ -78,6 +80,10 @@
 		EE3BE9521F6612D9009E8881 /* FiltroDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3BE9511F6612D9009E8881 /* FiltroDialogView.xib */; };
 		EE3BE9541F66160C009E8881 /* FiltroDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3BE9531F66160C009E8881 /* FiltroDialogView.swift */; };
 		EE3BE9561F6619EB009E8881 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3BE9551F6619EB009E8881 /* View.swift */; };
+		EE5F269E1F6C42E30045C11A /* TransferenciaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5F269D1F6C42E30045C11A /* TransferenciaService.swift */; };
+		EE5F26A11F6C60EC0045C11A /* FavorecidoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5F269F1F6C60EC0045C11A /* FavorecidoTableViewCell.swift */; };
+		EE5F26A21F6C60EC0045C11A /* FavorecidoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5F26A01F6C60EC0045C11A /* FavorecidoTableViewCell.xib */; };
+		EE5F26A41F6C79DF0045C11A /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5F26A31F6C79DF0045C11A /* Mask.swift */; };
 		EE63C8E01F6981030048847B /* TipoProcessoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE63C8DF1F6981030048847B /* TipoProcessoModel.swift */; };
 		EE73AFA21F68195A00F2E828 /* Arquivo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73AFA01F68195A00F2E828 /* Arquivo.swift */; };
 		EE73AFA31F68195A00F2E828 /* Digitalizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73AFA11F68195A00F2E828 /* Digitalizacao.swift */; };
@@ -115,6 +121,8 @@
 		171D7E9D3F17852863B43A82 /* Pods-Cliente.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cliente.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cliente/Pods-Cliente.debug.xcconfig"; sourceTree = "<group>"; };
 		63D548EFB6859FBB4CB561C4 /* Pods-Cliente.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cliente.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cliente/Pods-Cliente.release.xcconfig"; sourceTree = "<group>"; };
 		C8DCF36DDC724F47EF26F814 /* Pods_Cliente.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cliente.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2DACA41F6B33C1009A4EA9 /* TransferenciaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferenciaViewController.swift; sourceTree = "<group>"; };
+		EE2DACA61F6B33EC009A4EA9 /* FavorecidoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorecidoViewController.swift; sourceTree = "<group>"; };
 		EE333BF01F66BF7500591CD4 /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		EE333C011F66FA7A00591CD4 /* ImageViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 		EE333C031F66FD9B00591CD4 /* ProcessoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessoService.swift; sourceTree = "<group>"; };
@@ -189,6 +197,10 @@
 		EE3BE9511F6612D9009E8881 /* FiltroDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiltroDialogView.xib; sourceTree = "<group>"; };
 		EE3BE9531F66160C009E8881 /* FiltroDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltroDialogView.swift; sourceTree = "<group>"; };
 		EE3BE9551F6619EB009E8881 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		EE5F269D1F6C42E30045C11A /* TransferenciaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferenciaService.swift; sourceTree = "<group>"; };
+		EE5F269F1F6C60EC0045C11A /* FavorecidoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorecidoTableViewCell.swift; sourceTree = "<group>"; };
+		EE5F26A01F6C60EC0045C11A /* FavorecidoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavorecidoTableViewCell.xib; sourceTree = "<group>"; };
+		EE5F26A31F6C79DF0045C11A /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
 		EE63C8DF1F6981030048847B /* TipoProcessoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoProcessoModel.swift; sourceTree = "<group>"; };
 		EE73AFA01F68195A00F2E828 /* Arquivo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arquivo.swift; sourceTree = "<group>"; };
 		EE73AFA11F68195A00F2E828 /* Digitalizacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Digitalizacao.swift; sourceTree = "<group>"; };
@@ -343,6 +355,7 @@
 				EE3BE8DD1F658305009E8881 /* PickerField.swift */,
 				EEACBE921F6ACFC2004AC2A6 /* RoundButton.swift */,
 				EE3BE92D1F65BF34009E8881 /* DateField.swift */,
+				EE5F26A31F6C79DF0045C11A /* Mask.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -386,6 +399,8 @@
 				EE3BE94A1F6602B9009E8881 /* ProcessoPesquisaViewController.swift */,
 				EE73AFB71F683ABB00F2E828 /* FinalizacaoViewController.swift */,
 				EEACBE941F6AD0F7004AC2A6 /* ChequeDetalheViewController.swift */,
+				EE2DACA41F6B33C1009A4EA9 /* TransferenciaViewController.swift */,
+				EE2DACA61F6B33EC009A4EA9 /* FavorecidoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -438,6 +453,7 @@
 				EE73AFA81F681A6600F2E828 /* DigitalizacaoService.swift */,
 				EE73AFA91F681A6600F2E828 /* RealmService.swift */,
 				EEACBE961F6ADE08004AC2A6 /* DocumentoService.swift */,
+				EE5F269D1F6C42E30045C11A /* TransferenciaService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -456,6 +472,8 @@
 				EEE711261F69A889005AFE5F /* ChequeTableViewCell.xib */,
 				EEE711291F69C122005AFE5F /* DocumentoTableViewCell.swift */,
 				EEE7112A1F69C122005AFE5F /* DocumentoTableViewCell.xib */,
+				EE5F269F1F6C60EC0045C11A /* FavorecidoTableViewCell.swift */,
+				EE5F26A01F6C60EC0045C11A /* FavorecidoTableViewCell.xib */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -557,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEACBE9C1F6B003A004AC2A6 /* PendenciaDialogView.xib in Resources */,
+				EE5F26A21F6C60EC0045C11A /* FavorecidoTableViewCell.xib in Resources */,
 				EE3BE9411F65DE6F009E8881 /* TableHeaderView.xib in Resources */,
 				EE3BE9241F658605009E8881 /* Menu.storyboard in Resources */,
 				EE3BE8C21F658223009E8881 /* LaunchScreen.storyboard in Resources */,
@@ -639,6 +658,7 @@
 				EE73AFAA1F681A6600F2E828 /* DigitalizacaoService.swift in Sources */,
 				EEE7112B1F69C122005AFE5F /* DocumentoTableViewCell.swift in Sources */,
 				EE3BE90F1F6584B5009E8881 /* AbraContaViewController.swift in Sources */,
+				EE2DACA71F6B33EC009A4EA9 /* FavorecidoViewController.swift in Sources */,
 				EEACBE991F6B0021004AC2A6 /* JustificativaModel.swift in Sources */,
 				EE73AFA31F68195A00F2E828 /* Digitalizacao.swift in Sources */,
 				EEACBE931F6ACFC2004AC2A6 /* RoundButton.swift in Sources */,
@@ -650,6 +670,7 @@
 				EE3BE8DE1F658305009E8881 /* App.swift in Sources */,
 				EE3BE9131F6584B5009E8881 /* LoginViewController.swift in Sources */,
 				EE73AFA21F68195A00F2E828 /* Arquivo.swift in Sources */,
+				EE2DACA51F6B33C1009A4EA9 /* TransferenciaViewController.swift in Sources */,
 				EE3BE8E01F658305009E8881 /* Dimens.swift in Sources */,
 				EE3BE8EA1F658305009E8881 /* ShadowUtils.swift in Sources */,
 				EE3BE93A1F65D6A3009E8881 /* ClienteService.swift in Sources */,
@@ -678,6 +699,7 @@
 				EE3BE9171F6584B5009E8881 /* SobreViewController.swift in Sources */,
 				EE3BE8E21F658305009E8881 /* Network.swift in Sources */,
 				EE3BE9121F6584B5009E8881 /* FrontViewController.swift in Sources */,
+				EE5F26A41F6C79DF0045C11A /* Mask.swift in Sources */,
 				EE3BE8E61F658305009E8881 /* Service.swift in Sources */,
 				EEE711201F69A02A005AFE5F /* DocumentoModel.swift in Sources */,
 				EE333C0D1F670C7200591CD4 /* FavorecidoModel.swift in Sources */,
@@ -686,6 +708,7 @@
 				EE3BE9381F65D50C009E8881 /* CampoGrupoModel.swift in Sources */,
 				EE3BE91B1F6584ED009E8881 /* Cheqfast.swift in Sources */,
 				EE333C0F1F670C9500591CD4 /* TransferenciaModel.swift in Sources */,
+				EE5F26A11F6C60EC0045C11A /* FavorecidoTableViewCell.swift in Sources */,
 				EE3BE9371F65D50C009E8881 /* CampoModel.swift in Sources */,
 				EE3BE8ED1F658305009E8881 /* PickerField.swift in Sources */,
 				EEACBE911F6ACE66004AC2A6 /* Button.swift in Sources */,
@@ -705,6 +728,7 @@
 				EEE711271F69A889005AFE5F /* ChequeTableViewCell.swift in Sources */,
 				EE73AFA61F68196800F2E828 /* ArquivoModel.swift in Sources */,
 				EE3BE9191F6584B5009E8881 /* TermoViewController.swift in Sources */,
+				EE5F269E1F6C42E30045C11A /* TransferenciaService.swift in Sources */,
 				EE3BE8FD1F65847A009E8881 /* PesquisaModel.swift in Sources */,
 				EE3BE9201F658579009E8881 /* SWRevealViewController.m in Sources */,
 				EE3BE8E91F658305009E8881 /* NumberUtils.swift in Sources */,
