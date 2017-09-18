@@ -14,6 +14,9 @@ class DocumentoTableViewCell: UITableViewCell {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var documentoLabel: UILabel!
+    @IBOutlet weak var observacaoLabel: UILabel!
+    @IBOutlet weak var irregularidadeLabel: UILabel!
+    
     @IBOutlet weak var statusImageView: UIImageView!
     
     override func awakeFromNib() {
@@ -30,6 +33,12 @@ class DocumentoTableViewCell: UITableViewCell {
         } else {
             ViewUtils.text(nil, for: documentoLabel)
         }
+        ViewUtils.text(nil, for: observacaoLabel)
+        ViewUtils.text(nil, for: irregularidadeLabel)
+        if model.status == .pendente {
+            ViewUtils.text(model.pendenciaObservacao, for: observacaoLabel)
+            ViewUtils.text(model.irregularidadeNome, for: irregularidadeLabel)
+        }
     }
 }
 
@@ -37,6 +46,14 @@ extension DocumentoTableViewCell {
     
     static var height: CGFloat {
         return 117
+    }
+    
+    static var pendingHeight: CGFloat {
+        return 42
+    }
+    
+    static var totalHeight: CGFloat {
+        return height + pendingHeight
     }
     
     static var nibName: String {

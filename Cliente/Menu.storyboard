@@ -152,7 +152,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuTableViewCell" id="Dti-cc-ZRJ" customClass="MenuTableViewCell" customModule="Cliente" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="232.5" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="233" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dti-cc-ZRJ" id="yJ5-N7-T3T">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
@@ -266,7 +266,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ADv-DP-I2h" id="my6-zC-zIO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ZD-kH-537">
@@ -1398,9 +1398,11 @@
                         <outlet property="tableView" destination="RL1-7X-ea7" id="qZ5-4J-IWE"/>
                         <outlet property="totalLabel" destination="cqQ-Nj-fd4" id="XdL-ih-wXt"/>
                         <outlet property="valorLabel" destination="LJn-N2-5BI" id="9Iq-4s-HfC"/>
+                        <segue destination="Uta-VN-gGG" kind="unwind" identifier="Unwind.Processo.Detalhe" unwindAction="unwindToProcessoDetalheWithSegue:" id="boW-R9-E3Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBb-OT-sjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Uta-VN-gGG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6020" y="-4653.8230884557724"/>
         </scene>

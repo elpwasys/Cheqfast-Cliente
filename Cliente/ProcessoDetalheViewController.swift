@@ -57,6 +57,16 @@ class ProcessoDetalheViewController: DrawerViewController {
     @IBAction func onInfoTapped() {
         verificarDigitalizacao()
     }
+    
+    @IBAction func unwindToProcessoDetalhe(segue: UIStoryboardSegue) {
+        if let controller = segue.source as? TransferenciaViewController {
+            if let dataSet = controller.dataSet {
+                regra = dataSet.meta
+                processo = dataSet.data
+                popular()
+            }
+        }
+    }
 }
 
 extension ProcessoDetalheViewController {
@@ -110,8 +120,7 @@ extension ProcessoDetalheViewController {
             }
             tableView.reloadData()
             // FLOAT BUTTONS
-            //hideMenu()
-            /*
+            hideMenu()
             if let regra = self.regra {
                 aprovarFloatButton.isHidden = !regra.podeAprovar
                 cancelarFloatButton.isHidden = !regra.podeCancelar
@@ -119,7 +128,6 @@ extension ProcessoDetalheViewController {
                     menuFloatButton.isHidden = false
                 }
             }
- */
         }
     }
     
@@ -153,7 +161,7 @@ extension ProcessoDetalheViewController {
                 item.titleColor = UIColor.black
                 item.titleShadowColor = UIColor.white.withAlphaComponent(0)
             }
-            //hideMenu()
+            hideMenu()
             self.view.addSubview(menuFloatButton)
         }
     }
@@ -244,7 +252,10 @@ extension ProcessoDetalheViewController: UITableViewDelegate {
         switch row {
         case .campo(_ ):
             return TextFieldTableViewCell.height
-        case .documento(_ ):
+        case .documento(let documento):
+            if documento.status == .pendente {
+                return DocumentoTableViewCell.totalHeight
+            }
             return DocumentoTableViewCell.height
         }
     }

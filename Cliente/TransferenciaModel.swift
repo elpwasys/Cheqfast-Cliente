@@ -27,7 +27,9 @@ class TransferenciaModel: Model {
                 if values == nil {
                     values = [String: Any]()
                 }
-                if value is [String: Any] || value is [[String: Any]] {
+                if value is Double {
+                    values?[key] = value
+                } else if value is [String: Any] || value is [[String: Any]] {
                     values?[key] = value
                 } else if let text = TextUtils.text(value) {
                     values?[key] = text

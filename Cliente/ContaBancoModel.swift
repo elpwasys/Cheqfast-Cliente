@@ -26,11 +26,16 @@ class ContaBancoModel: Model {
     var dictionary: [String: Any]? {
         var values: [String: Any]?
         func put(_ key: String, _ value: Any?) {
-            if value != nil, let text = TextUtils.text(value) {
+            if value != nil {
                 if values == nil {
                     values = [String: Any]()
                 }
-                values?[key] = text
+                if value is Double {
+                    values?[key] = value
+                } else if let text = TextUtils.text(value) {
+                    values?[key] = text
+                }
+                
             }
         }
         if let status = self.status {

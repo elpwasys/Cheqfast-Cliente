@@ -25,6 +25,7 @@ class TransferenciaViewController: CheqfastViewController {
     @IBOutlet weak var confirmarButton: MDCRaisedButton!
     
     var id: Int?
+    var dataSet: DataSet<ProcessoModel, ProcessoRegraModel>?
     
     fileprivate var current: FavorecidoModel?
     fileprivate var transferencia: TransferenciaModel?
@@ -71,7 +72,7 @@ class TransferenciaViewController: CheqfastViewController {
                     style: UIAlertActionStyle.default,
                     handler: { (action: UIAlertAction!) in
                         self.aprovar()
-                }
+                    }
                 ))
                 alert.addAction(UIAlertAction(
                     title: TextUtils.localized(forKey: "Label.Nao"),
@@ -174,7 +175,23 @@ extension TransferenciaViewController {
     }
     
     fileprivate func aprovar() {
-        
+        if let id = self.id, let transferencia = self.transferencia {
+            let newTransferencia = TransferenciaModel()
+            let newPrincipal = ContaBancoModel()
+            newPrincipal.banco = transferencia.principal?.banco
+            newPrincipal.agencia = transferencia.principal?.agencia
+            newPrincipal.conta = transferencia.principal?.conta
+            newPrincipal.nomeTitular = transferencia.principal?.nomeTitular
+            newPrincipal.cpfCnpj = transferencia.principal?.cpfCnpj
+            newPrincipal.custo = transferencia.principal?.custo
+            newPrincipal.valor = transferencia.principal?.valor
+            newPrincipal.valorTransferencia = transferencia.principal?.valorTransferencia
+            newTransferencia.principal = newPrincipal
+            if !self.favorecidos.isEmpty {
+                newTransferencia.favorecidos = self.favorecidos
+            }
+            startAsyncAprovar(id, newTransferencia)
+        }
     }
 }
 
@@ -184,6 +201,11 @@ extension TransferenciaViewController {
     fileprivate func obterDidCompleted(_ model: TransferenciaModel) {
         transferencia = model
         popular()
+    }
+    
+    fileprivate func aprovarDidCompleted(_ dataSet: DataSet<ProcessoModel, ProcessoRegraModel>) {
+        self.dataSet = dataSet
+        self.performSegue(withIdentifier: "Unwind.Processo.Detalhe", sender: self)
     }
 }
 
@@ -197,6 +219,24 @@ extension TransferenciaViewController {
             .subscribe(
                 onNext: { model in
                     self.obterDidCompleted(model)
+                },
+                onError: { error in
+                    self.hideActivityIndicator()
+                    self.handle(error)
+                },
+                onCompleted: {
+                    self.hideActivityIndicator()
+                }
+            ).addDisposableTo(disposableBag)
+    }
+    
+    fileprivate func startAsyncAprovar(_ id: Int, _ transferencia: TransferenciaModel) {
+        showActivityIndicator()
+        let observable = ProcessoService.Async.aprovar(id, model: transferencia)
+        prepare(for: observable)
+            .subscribe(
+                onNext: { dataSet in
+                    self.aprovarDidCompleted(dataSet)
                 },
                 onError: { error in
                     self.hideActivityIndicator()
